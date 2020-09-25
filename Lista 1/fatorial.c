@@ -12,9 +12,9 @@ int fat_rec(int n) {
         return(1);
     else return(n*fat_rec(n-1));
 }
-
+ 
 int main (void) {
-    int n;
+    int n;  
     printf("Entre com um numero: ");
     scanf("%d" , &n);
     printf("(iterativo) O fatorial do numero %d eh %d\n", n , fat(n));
