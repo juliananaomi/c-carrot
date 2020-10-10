@@ -1,4 +1,4 @@
 all:
-	gcc -o *.c -lm
+	gcc *.c -o trab
 run:
-	./ex17
+	./trab

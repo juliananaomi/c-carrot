@@ -7,7 +7,7 @@ typedef struct {
     elem itens[TamPilha];
 } Pilha;
 
-Pilha Create(Pilha*);
+void Create(Pilha*);
 void Push(Pilha*, elem*, int*);
 void Pop(Pilha *, elem*, int*);
 int IsFull(Pilha*);

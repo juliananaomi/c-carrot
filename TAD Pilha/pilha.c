@@ -2,9 +2,9 @@
 
 typedef int elem;
 
-Pilha Create(Pilha *P) {
+void Create(Pilha *P) {
     P->topo=-1;
-    return *P;
+    return;
 }
 
 int IsFull(Pilha *P) {
