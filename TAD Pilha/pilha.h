@@ -10,6 +10,7 @@ typedef struct {
 void Create(Pilha*);
 void Push(Pilha*, elem*, int*);
 void Pop(Pilha *, elem*, int*);
+void Print(Pilha*);
 int IsFull(Pilha*);
 int IsEmpty(Pilha*);
 elem Top(Pilha*, int*);

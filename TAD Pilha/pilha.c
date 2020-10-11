@@ -1,4 +1,6 @@
 #include "pilha.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef int elem;
 
@@ -47,5 +49,22 @@ elem Top(Pilha *P, int *erro) {
     else {
         *erro=1;
         return(-1);
+    }
+}
+
+void Print(Pilha *P) {
+    Pilha Paux;
+    elem x;
+    int erro;
+    Create(&Paux);
+    while (!IsEmpty(P)) {
+        Pop(P, &x, &erro);
+        printf(" %d", x);
+        Push(&Paux, &x, &erro);
+    }
+
+    while (!IsEmpty(&Paux)) {
+        Pop(&Paux, &x, &erro);
+        Push(P, &x, &erro);
     }
 }
