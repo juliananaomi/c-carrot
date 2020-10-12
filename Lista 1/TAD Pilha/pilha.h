@@ -1,12 +1,16 @@
 #define TamPilha 10
 
+typedef int elem;
+
 typedef struct {
     int topo;
-    int itens[TamPilha];
+    elem itens[TamPilha];
 } Pilha;
 
 void Create(Pilha*);
-void Push(Pilha*, int, int*);
-void Pop(Pilha *, int*, int*);
+void Push(Pilha*, elem*, int*);
+void Pop(Pilha *, elem*, int*);
+void Print(Pilha*);
 int IsFull(Pilha*);
 int IsEmpty(Pilha*);
+elem Top(Pilha*, int*);

@@ -6,7 +6,12 @@ typedef int elem;
 
 typedef struct {
     elem info[TamFila];
-    int inicio, fim;
+    int inicio, fim, total;
 } Fila;
 
 void criar_fila(Fila*);
+int Cheia(Fila*);
+int Vazia(Fila*);
+void Total(Fila*);
+int inserir(Fila*, elem*, int*);
+void retirar(Fila*, elem*, int*);
