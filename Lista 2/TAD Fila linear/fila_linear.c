@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fila_estatica.h"
+#include "fila_linear.h"
 
 typedef int elem;
 
@@ -21,31 +21,35 @@ int Vazia(Fila *F) {
 }
 
 void Total(Fila *F) {
-    printf("%d", F->total);
+    printf("\n%d\n", F->total);
 }
 
-int inserir(Fila *F, elem *x, int *erro) {
-    if(Cheia(F)) {
-        *erro=1;
-    }
+void inserir(Fila *F, elem *x, int *erro) {
+    if(Cheia(F)) *erro=1;
     else {
         F->info[F->fim] = *x;
-        if(F->fim == TamFila-1) F->fim=0;
-        else F->fim++;
+        F->fim++;
         F->total++;
         *erro=0;
     }
 }
 
 void retirar(Fila *F, elem *x, int *erro) {
-    if(Vazia(F)) {
-        *erro=1;
-    }
+    int i;
+    if(Vazia(F)) *erro=1;
     else {
-        *x = F->info[F->inicio];
-        if (F->inicio==TamFila-1) F->inicio=0;
-        else F->inicio++;
+        for (i = 0; i < F->fim; i++) {
+            F->info[i] = F->info[i+1];
+        }
         F->total--;
+        F->fim--;  
         *erro=0;
+    }
+}
+
+void Print(Fila *F) {
+    int i;
+    for (i = 0; i < F->fim; i++) {
+        printf("%d ", F->info[i]);
     }
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "fila_estatica.h"
+#include "fila_circular.h"
 
 int main(void) {
     Fila F;
@@ -11,9 +11,11 @@ int main(void) {
     inserir(&F, &x, &erro);
     x=5;
     inserir(&F, &x, &erro);
-    Total(&F);
+    x=4;
+    inserir(&F, &x, &erro);
     retirar(&F, &x, &erro);
+    printf("%d ", x);
     retirar(&F, &x, &erro);
-    Total(&F);
+    printf("%d ", x);
     return(0);
 }
