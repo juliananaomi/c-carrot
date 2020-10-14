@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #define TamFila 10
 
 typedef int elem;
