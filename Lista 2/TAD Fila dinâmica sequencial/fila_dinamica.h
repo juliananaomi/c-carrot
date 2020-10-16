@@ -8,4 +8,4 @@ typedef struct  {
 Fila* Criar(void);
 void Inserir(Fila*, elem*);
 void Retirar(Fila*, elem*, int*);
-void Print(Fila *F);
+void Print(Fila*);
