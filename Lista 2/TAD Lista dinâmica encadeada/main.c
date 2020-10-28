@@ -9,5 +9,6 @@ int main(void) {
     L = Criar();
     x = 10;
     Inserir(L, &x, &erro);
+    Remover(L, &x, &erro);
     return(0);
 }

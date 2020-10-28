@@ -14,7 +14,7 @@ void Push(Pilha *P, elem *x, int *erro) {
         *erro=1;
     else {
         pont->info = *x;
-        pont->prox =P->topo;
+        pont->prox = P->topo;
         P->topo=pont;
         *erro=0;
     }

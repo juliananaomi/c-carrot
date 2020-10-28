@@ -11,3 +11,5 @@ typedef struct {
 
 Lista* Criar(void);
 void Inserir(Lista*, elem*, int*);
+void Remover(Lista*, elem*, int*);
+void Finalizar(Lista*);

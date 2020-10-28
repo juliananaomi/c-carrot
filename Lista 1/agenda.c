@@ -55,4 +55,5 @@ int main(void) {
         }
     }
     else return(1); // Não
+    free(Registro);
 }
