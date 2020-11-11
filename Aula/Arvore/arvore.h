@@ -8,3 +8,6 @@ typedef struct bloco {
 typedef struct {
     no *raiz;
 } Arvore;
+
+Arvore* criar(void);
+no* busca(no*, elem*);

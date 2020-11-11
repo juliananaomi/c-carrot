@@ -3,5 +3,5 @@
 
 int main(void) {
     Arvore *A;
-    A = criar()
+    A = criar();
 }
