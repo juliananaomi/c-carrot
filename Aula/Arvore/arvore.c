@@ -31,7 +31,7 @@ no* busca_pai(no *p, elem *x) { // Procurar o pai de x
 
     if (p==NULL)
         return(NULL);
-    else if ((p->esp!=NULL) && (p->esq->info==*x))
+    else if ((p->esq!=NULL) && (p->esq->info==*x))
         return(p);
     else if ((p->dir!=NULL) && (p->dir->info==*x))
         return(p);
@@ -46,7 +46,7 @@ no* busca_pai(no *p, elem *x) { // Procurar o pai de x
 void inserir_esq(Arvore *A,elem *x, elem *pai, int *erro) {
     no *aux, *p;
     if (*pai!=-1) {
-        aux=buca(A->raiz, pai);
+        aux=busca(A->raiz, pai);
         if ((aux!=NULL) && (aux->esq==NULL)) {
             p=(no*)malloc(sizeof(no));
             p->info=*x;
@@ -65,7 +65,6 @@ void inserir_esq(Arvore *A,elem *x, elem *pai, int *erro) {
             A->raiz=p;
             *erro=0;
         }
-    }
 }
 
 int altura (no *p) {
@@ -81,3 +80,4 @@ int altura (no *p) {
         else return(alt_dir);
     }
 }
+
